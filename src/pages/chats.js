@@ -54,15 +54,27 @@ const ChatsScreen = () => {
             </ScrollView>
             <View style={styles.bottomBar}>
                 {/* <Text>Hello World!</Text> */}
-                <Icon name="comments" size={30} color="black" style={styles.icon} />
+                <Image
+                    source={require('../assets/chats.jpg')}
+                    style={{ width: 50, height: 50, borderRadius: 10, }} 
+                />
                 <TouchableOpacity onPress={handlePress} style={styles.icon}>
-                    <Icon name="address-book" size={30} color="black" />
+                    <Image
+                    source={require('../assets/contacts.jpg')}
+                    style={{ width: 50, height: 50, borderRadius: 10, }} 
+                />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={handlePress2} style={styles.icon}>
-                    <Icon name="compass" size={30} color="black" />
+                    <Image
+                        source={require('../assets/discover.jpg')}
+                        style={{ width: 50, height: 50, borderRadius: 10, }} 
+                    />
                 </TouchableOpacity>
                 {/* <Icon name="compass" size={30} color="black" style={styles.icon} /> */}
-                <Icon name="user" size={30} color="black" style={styles.icon} /> 
+                <Image
+                    source={require('../assets/me.jpg')}
+                    style={{ width: 50, height: 50, borderRadius: 10, }} 
+                />
             </View>
 
             
