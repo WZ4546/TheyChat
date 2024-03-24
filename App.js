@@ -7,6 +7,8 @@ import IndexScreen from './src/pages/Login';
 import ChatsScreen from './src/pages/chats'; 
 import ContactsScreen from './src/pages/Contacts'; 
 import DiscoverScreen from './src/pages/Discover'; 
+import ElonChat from './src/pages/elonchat'; 
+import ElonContact from './src/pages/eloncontact'; 
 
 const Stack = createStackNavigator();
 
@@ -29,7 +31,8 @@ export default function App() {
           <Stack.Screen name="TheyChat" component={ChatsScreen} />
           <Stack.Screen name="Contacts" component={ContactsScreen} />
           <Stack.Screen name="Discover" component={DiscoverScreen} />
-          {/* <Stack.Screen name="TheyChat" component={ChatsScreen} /> */}
+          <Stack.Screen name="Elon" component={ElonChat} />
+          <Stack.Screen name="Profile" component={ElonContact} />
         </Stack.Navigator>
       ) : (
         <View style={styles.container}>

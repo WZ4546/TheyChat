@@ -7,10 +7,13 @@ import { useNavigation } from '@react-navigation/native';
 const ChatsScreen = () => {
     const navigation = useNavigation();
     const handlePress = () => {
-        navigation.navigate('Contacts'); // 导航到联系人页面
+        navigation.navigate('Contacts'); 
     };
     const handlePress2 = () => {
-    navigation.navigate('Discover'); // 导航到联系人页面
+        navigation.navigate('Discover');
+    };
+    const handleChatPress = () => {
+        navigation.navigate('Elon');
     };
     return (
             <View style={styles.container}>
@@ -25,19 +28,20 @@ const ChatsScreen = () => {
                 </TouchableOpacity>
             </View>
             <ScrollView contentContainerStyle={styles.chatContainer}>
-                <View style={styles.chatBox}>
-                
-                <Image
-                    source={require('../assets/elon.png')}
-                    style={{ width: 50, height: 50, borderRadius: 10, }} 
-                />
-                <View style={styles.messageContainer}>
-                    <Text style={styles.messageText}>Hello, how are you?</Text>
-                </View>
-                <View style={styles.timeContainer}>
-                    <Text style={styles.timeText}>10:00 AM</Text>
-                </View>
-                </View>
+                <TouchableOpacity onPress={handleChatPress}>
+                    <View style={styles.chatBox}>
+                        <Image
+                            source={require('../assets/elon.png')}
+                            style={{ width: 50, height: 50, borderRadius: 10, }} 
+                        />
+                        <View style={styles.messageContainer}>
+                            <Text style={styles.messageText}>Hello, how are you?</Text>
+                        </View>
+                        <View style={styles.timeContainer}>
+                            <Text style={styles.timeText}>10:00 AM</Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
 
                 <View style={styles.chatBox}>
                 <Image
@@ -70,7 +74,6 @@ const ChatsScreen = () => {
                         style={{ width: 50, height: 50, borderRadius: 10, }} 
                     />
                 </TouchableOpacity>
-                {/* <Icon name="compass" size={30} color="black" style={styles.icon} /> */}
                 <Image
                     source={require('../assets/me.jpg')}
                     style={{ width: 50, height: 50, borderRadius: 10, }} 
@@ -87,22 +90,22 @@ const ChatsScreen = () => {
         flex: 1,
     },
     searchBar: {
-        flexDirection: 'row', // 水平排列
-        alignItems: 'center', // 垂直居中对齐
+        flexDirection: 'row', 
+        alignItems: 'center',
         padding: 10,
         borderBottomWidth: 1,
         borderBottomColor: '#CCCCCC',
-        backgroundColor: '#F0F0F0', // 灰色的背景
+        backgroundColor: '#F0F0F0',
     },
     searchInput: {
-        flex: 1, // 输入框自动填充剩余空间
+        flex: 1, 
         height: 40,
         borderWidth: 1,
-        borderColor: '#CCCCCC', // 边框颜色与背景一致
+        borderColor: '#CCCCCC', 
         borderRadius: 5,
         paddingHorizontal: 10,
-        backgroundColor: '#FFFFFF', // 白色的填充
-        position: 'relative', // 允许子元素使用绝对定位
+        backgroundColor: '#FFFFFF', 
+        position: 'relative', 
     },
     chatBox: {
         flexDirection: 'row',
@@ -115,8 +118,8 @@ const ChatsScreen = () => {
     messageTimeContainer: {
         flex: 1,
         position: 'absolute',
-        top: 20, // 将时间定位到顶部
-        right: 0, // 将时间定位到右侧
+        top: 20,
+        right: 0,
     },
     messageContainer: {   
         flex: 1,
